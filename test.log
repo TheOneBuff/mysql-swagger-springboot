@@ -1,0 +1,128 @@
+2019-10-31 08:53:28.859  INFO 14916 --- [main] com.example.demo.DemoApplication         : Starting DemoApplication on wanghaopeng with PID 14916 (started by admin in C:\Users\姚丽霞\Desktop\学习代码\java学习\mysql-swagger-springboot\mysql-swagger-springboot-test)
+2019-10-31 08:53:28.875  INFO 14916 --- [main] com.example.demo.DemoApplication         : No active profile set, falling back to default profiles: default
+2019-10-31 08:53:30.170  INFO 14916 --- [main] trationDelegate$BeanPostProcessorChecker : Bean 'org.springframework.transaction.annotation.ProxyTransactionManagementConfiguration' of type [org.springframework.transaction.annotation.ProxyTransactionManagementConfiguration] is not eligible for getting processed by all BeanPostProcessors (for example: not eligible for auto-proxying)
+2019-10-31 08:53:30.418  INFO 14916 --- [main] o.s.b.w.embedded.tomcat.TomcatWebServer  : Tomcat initialized with port(s): 1010 (http)
+2019-10-31 08:53:30.428  INFO 14916 --- [main] o.apache.catalina.core.StandardService   : Starting service [Tomcat]
+2019-10-31 08:53:30.428  INFO 14916 --- [main] org.apache.catalina.core.StandardEngine  : Starting Servlet engine: [Apache Tomcat/9.0.27]
+2019-10-31 08:53:30.534  INFO 14916 --- [main] o.a.c.c.C.[Tomcat].[localhost].[/]       : Initializing Spring embedded WebApplicationContext
+2019-10-31 08:53:30.535  INFO 14916 --- [main] o.s.web.context.ContextLoader            : Root WebApplicationContext: initialization completed in 1513 ms
+2019-10-31 08:53:31.157  INFO 14916 --- [main] o.s.s.concurrent.ThreadPoolTaskExecutor  : Initializing ExecutorService 'applicationTaskExecutor'
+2019-10-31 08:53:31.334  INFO 14916 --- [main] d.s.w.p.DocumentationPluginsBootstrapper : Context refreshed
+2019-10-31 08:53:31.348  INFO 14916 --- [main] d.s.w.p.DocumentationPluginsBootstrapper : Found 1 custom documentation plugin(s)
+2019-10-31 08:53:31.356  INFO 14916 --- [main] s.d.s.w.s.ApiListingReferenceScanner     : Scanning for api listing references
+2019-10-31 08:53:31.400  WARN 14916 --- [main] d.s.r.o.OperationImplicitParameterReader : Coercing to be of type string. This may not even be a scalar type in actuality
+2019-10-31 08:53:31.463  WARN 14916 --- [main] d.s.r.o.OperationImplicitParameterReader : Coercing to be of type string. This may not even be a scalar type in actuality
+2019-10-31 08:53:31.501  INFO 14916 --- [main] o.s.b.w.embedded.tomcat.TomcatWebServer  : Tomcat started on port(s): 1010 (http) with context path ''
+2019-10-31 08:53:31.503  INFO 14916 --- [main] com.example.demo.DemoApplication         : Started DemoApplication in 3.293 seconds (JVM running for 4.596)
+2019-10-31 08:53:59.953  INFO 14916 --- [http-nio-1010-exec-1] o.a.c.c.C.[Tomcat].[localhost].[/]       : Initializing Spring DispatcherServlet 'dispatcherServlet'
+2019-10-31 08:53:59.953  INFO 14916 --- [http-nio-1010-exec-1] o.s.web.servlet.DispatcherServlet        : Initializing Servlet 'dispatcherServlet'
+2019-10-31 08:53:59.960  INFO 14916 --- [http-nio-1010-exec-1] o.s.web.servlet.DispatcherServlet        : Completed initialization in 7 ms
+2019-10-31 08:54:05.365  INFO 14916 --- [http-nio-1010-exec-4] com.zaxxer.hikari.HikariDataSource       : HikariPool-1 - Starting...
+2019-10-31 08:54:05.502  INFO 14916 --- [http-nio-1010-exec-4] com.zaxxer.hikari.HikariDataSource       : HikariPool-1 - Start completed.
+2019-10-31 08:54:05.509 DEBUG 14916 --- [http-nio-1010-exec-4] dao.UserDao.userlist                     : ==>  Preparing: select * from user 
+2019-10-31 08:54:05.530 DEBUG 14916 --- [http-nio-1010-exec-4] dao.UserDao.userlist                     : ==> Parameters: 
+2019-10-31 08:54:05.562 DEBUG 14916 --- [http-nio-1010-exec-4] dao.UserDao.userlist                     : <==      Total: 2
+2019-10-31 08:56:42.506  INFO 17200 --- [main] com.example.demo.DemoApplication         : Starting DemoApplication on wanghaopeng with PID 17200 (started by admin in C:\Users\姚丽霞\Desktop\学习代码\java学习\mysql-swagger-springboot\mysql-swagger-springboot-test)
+2019-10-31 08:56:42.510  INFO 17200 --- [main] com.example.demo.DemoApplication         : No active profile set, falling back to default profiles: default
+2019-10-31 08:56:43.587  INFO 17200 --- [main] trationDelegate$BeanPostProcessorChecker : Bean 'org.springframework.transaction.annotation.ProxyTransactionManagementConfiguration' of type [org.springframework.transaction.annotation.ProxyTransactionManagementConfiguration] is not eligible for getting processed by all BeanPostProcessors (for example: not eligible for auto-proxying)
+2019-10-31 08:56:43.794  INFO 17200 --- [main] o.s.b.w.embedded.tomcat.TomcatWebServer  : Tomcat initialized with port(s): 1010 (http)
+2019-10-31 08:56:43.804  INFO 17200 --- [main] o.apache.catalina.core.StandardService   : Starting service [Tomcat]
+2019-10-31 08:56:43.804  INFO 17200 --- [main] org.apache.catalina.core.StandardEngine  : Starting Servlet engine: [Apache Tomcat/9.0.27]
+2019-10-31 08:56:43.902  INFO 17200 --- [main] o.a.c.c.C.[Tomcat].[localhost].[/]       : Initializing Spring embedded WebApplicationContext
+2019-10-31 08:56:43.902  INFO 17200 --- [main] o.s.web.context.ContextLoader            : Root WebApplicationContext: initialization completed in 1284 ms
+2019-10-31 08:56:44.386  INFO 17200 --- [main] o.s.s.concurrent.ThreadPoolTaskExecutor  : Initializing ExecutorService 'applicationTaskExecutor'
+2019-10-31 08:56:44.552  INFO 17200 --- [main] d.s.w.p.DocumentationPluginsBootstrapper : Context refreshed
+2019-10-31 08:56:44.565  INFO 17200 --- [main] d.s.w.p.DocumentationPluginsBootstrapper : Found 1 custom documentation plugin(s)
+2019-10-31 08:56:44.574  INFO 17200 --- [main] s.d.s.w.s.ApiListingReferenceScanner     : Scanning for api listing references
+2019-10-31 08:56:44.614  WARN 17200 --- [main] d.s.r.o.OperationImplicitParameterReader : Coercing to be of type string. This may not even be a scalar type in actuality
+2019-10-31 08:56:44.685  WARN 17200 --- [main] d.s.r.o.OperationImplicitParameterReader : Coercing to be of type string. This may not even be a scalar type in actuality
+2019-10-31 08:56:44.723  INFO 17200 --- [main] o.s.b.w.embedded.tomcat.TomcatWebServer  : Tomcat started on port(s): 1010 (http) with context path ''
+2019-10-31 08:56:44.726  INFO 17200 --- [main] com.example.demo.DemoApplication         : Started DemoApplication in 2.637 seconds (JVM running for 3.715)
+2019-10-31 08:56:48.315  INFO 17200 --- [http-nio-1010-exec-1] o.a.c.c.C.[Tomcat].[localhost].[/]       : Initializing Spring DispatcherServlet 'dispatcherServlet'
+2019-10-31 08:56:48.315  INFO 17200 --- [http-nio-1010-exec-1] o.s.web.servlet.DispatcherServlet        : Initializing Servlet 'dispatcherServlet'
+2019-10-31 08:56:48.321  INFO 17200 --- [http-nio-1010-exec-1] o.s.web.servlet.DispatcherServlet        : Completed initialization in 6 ms
+2019-10-31 08:56:53.575 ERROR 17200 --- [http-nio-1010-exec-8] o.a.c.c.C.[.[.[/].[dispatcherServlet]    : Servlet.service() for servlet [dispatcherServlet] in context with path [] threw exception [Request processing failed; nested exception is org.apache.ibatis.binding.BindingException: Invalid bound statement (not found): dao.UserDao.selectUser] with root cause
+
+org.apache.ibatis.binding.BindingException: Invalid bound statement (not found): dao.UserDao.selectUser
+	at org.apache.ibatis.binding.MapperMethod$SqlCommand.<init>(MapperMethod.java:225) ~[mybatis-3.4.5.jar:3.4.5]
+	at org.apache.ibatis.binding.MapperMethod.<init>(MapperMethod.java:48) ~[mybatis-3.4.5.jar:3.4.5]
+	at org.apache.ibatis.binding.MapperProxy.cachedMapperMethod(MapperProxy.java:65) ~[mybatis-3.4.5.jar:3.4.5]
+	at org.apache.ibatis.binding.MapperProxy.invoke(MapperProxy.java:58) ~[mybatis-3.4.5.jar:3.4.5]
+	at com.sun.proxy.$Proxy80.selectUser(Unknown Source) ~[na:na]
+	at service.impl.UserImpl.selectUser(UserImpl.java:24) ~[classes/:na]
+	at controller.MyController.selectUser(MyController.java:43) ~[classes/:na]
+	at sun.reflect.NativeMethodAccessorImpl.invoke0(Native Method) ~[na:1.8.0_211]
+	at sun.reflect.NativeMethodAccessorImpl.invoke(NativeMethodAccessorImpl.java:62) ~[na:1.8.0_211]
+	at sun.reflect.DelegatingMethodAccessorImpl.invoke(DelegatingMethodAccessorImpl.java:43) ~[na:1.8.0_211]
+	at java.lang.reflect.Method.invoke(Method.java:498) ~[na:1.8.0_211]
+	at org.springframework.web.method.support.InvocableHandlerMethod.doInvoke(InvocableHandlerMethod.java:190) ~[spring-web-5.2.0.RELEASE.jar:5.2.0.RELEASE]
+	at org.springframework.web.method.support.InvocableHandlerMethod.invokeForRequest(InvocableHandlerMethod.java:138) ~[spring-web-5.2.0.RELEASE.jar:5.2.0.RELEASE]
+	at org.springframework.web.servlet.mvc.method.annotation.ServletInvocableHandlerMethod.invokeAndHandle(ServletInvocableHandlerMethod.java:106) ~[spring-webmvc-5.2.0.RELEASE.jar:5.2.0.RELEASE]
+	at org.springframework.web.servlet.mvc.method.annotation.RequestMappingHandlerAdapter.invokeHandlerMethod(RequestMappingHandlerAdapter.java:888) ~[spring-webmvc-5.2.0.RELEASE.jar:5.2.0.RELEASE]
+	at org.springframework.web.servlet.mvc.method.annotation.RequestMappingHandlerAdapter.handleInternal(RequestMappingHandlerAdapter.java:793) ~[spring-webmvc-5.2.0.RELEASE.jar:5.2.0.RELEASE]
+	at org.springframework.web.servlet.mvc.method.AbstractHandlerMethodAdapter.handle(AbstractHandlerMethodAdapter.java:87) ~[spring-webmvc-5.2.0.RELEASE.jar:5.2.0.RELEASE]
+	at org.springframework.web.servlet.DispatcherServlet.doDispatch(DispatcherServlet.java:1040) ~[spring-webmvc-5.2.0.RELEASE.jar:5.2.0.RELEASE]
+	at org.springframework.web.servlet.DispatcherServlet.doService(DispatcherServlet.java:943) ~[spring-webmvc-5.2.0.RELEASE.jar:5.2.0.RELEASE]
+	at org.springframework.web.servlet.FrameworkServlet.processRequest(FrameworkServlet.java:1006) ~[spring-webmvc-5.2.0.RELEASE.jar:5.2.0.RELEASE]
+	at org.springframework.web.servlet.FrameworkServlet.doGet(FrameworkServlet.java:898) ~[spring-webmvc-5.2.0.RELEASE.jar:5.2.0.RELEASE]
+	at javax.servlet.http.HttpServlet.service(HttpServlet.java:634) ~[tomcat-embed-core-9.0.27.jar:9.0.27]
+	at org.springframework.web.servlet.FrameworkServlet.service(FrameworkServlet.java:883) ~[spring-webmvc-5.2.0.RELEASE.jar:5.2.0.RELEASE]
+	at javax.servlet.http.HttpServlet.service(HttpServlet.java:741) ~[tomcat-embed-core-9.0.27.jar:9.0.27]
+	at org.apache.catalina.core.ApplicationFilterChain.internalDoFilter(ApplicationFilterChain.java:231) ~[tomcat-embed-core-9.0.27.jar:9.0.27]
+	at org.apache.catalina.core.ApplicationFilterChain.doFilter(ApplicationFilterChain.java:166) ~[tomcat-embed-core-9.0.27.jar:9.0.27]
+	at org.apache.tomcat.websocket.server.WsFilter.doFilter(WsFilter.java:53) ~[tomcat-embed-websocket-9.0.27.jar:9.0.27]
+	at org.apache.catalina.core.ApplicationFilterChain.internalDoFilter(ApplicationFilterChain.java:193) ~[tomcat-embed-core-9.0.27.jar:9.0.27]
+	at org.apache.catalina.core.ApplicationFilterChain.doFilter(ApplicationFilterChain.java:166) ~[tomcat-embed-core-9.0.27.jar:9.0.27]
+	at org.springframework.web.filter.RequestContextFilter.doFilterInternal(RequestContextFilter.java:100) ~[spring-web-5.2.0.RELEASE.jar:5.2.0.RELEASE]
+	at org.springframework.web.filter.OncePerRequestFilter.doFilter(OncePerRequestFilter.java:119) ~[spring-web-5.2.0.RELEASE.jar:5.2.0.RELEASE]
+	at org.apache.catalina.core.ApplicationFilterChain.internalDoFilter(ApplicationFilterChain.java:193) ~[tomcat-embed-core-9.0.27.jar:9.0.27]
+	at org.apache.catalina.core.ApplicationFilterChain.doFilter(ApplicationFilterChain.java:166) ~[tomcat-embed-core-9.0.27.jar:9.0.27]
+	at org.springframework.web.filter.FormContentFilter.doFilterInternal(FormContentFilter.java:93) ~[spring-web-5.2.0.RELEASE.jar:5.2.0.RELEASE]
+	at org.springframework.web.filter.OncePerRequestFilter.doFilter(OncePerRequestFilter.java:119) ~[spring-web-5.2.0.RELEASE.jar:5.2.0.RELEASE]
+	at org.apache.catalina.core.ApplicationFilterChain.internalDoFilter(ApplicationFilterChain.java:193) ~[tomcat-embed-core-9.0.27.jar:9.0.27]
+	at org.apache.catalina.core.ApplicationFilterChain.doFilter(ApplicationFilterChain.java:166) ~[tomcat-embed-core-9.0.27.jar:9.0.27]
+	at org.springframework.web.filter.CharacterEncodingFilter.doFilterInternal(CharacterEncodingFilter.java:201) ~[spring-web-5.2.0.RELEASE.jar:5.2.0.RELEASE]
+	at org.springframework.web.filter.OncePerRequestFilter.doFilter(OncePerRequestFilter.java:119) ~[spring-web-5.2.0.RELEASE.jar:5.2.0.RELEASE]
+	at org.apache.catalina.core.ApplicationFilterChain.internalDoFilter(ApplicationFilterChain.java:193) ~[tomcat-embed-core-9.0.27.jar:9.0.27]
+	at org.apache.catalina.core.ApplicationFilterChain.doFilter(ApplicationFilterChain.java:166) ~[tomcat-embed-core-9.0.27.jar:9.0.27]
+	at org.apache.catalina.core.StandardWrapperValve.invoke(StandardWrapperValve.java:202) ~[tomcat-embed-core-9.0.27.jar:9.0.27]
+	at org.apache.catalina.core.StandardContextValve.invoke(StandardContextValve.java:96) [tomcat-embed-core-9.0.27.jar:9.0.27]
+	at org.apache.catalina.authenticator.AuthenticatorBase.invoke(AuthenticatorBase.java:526) [tomcat-embed-core-9.0.27.jar:9.0.27]
+	at org.apache.catalina.core.StandardHostValve.invoke(StandardHostValve.java:139) [tomcat-embed-core-9.0.27.jar:9.0.27]
+	at org.apache.catalina.valves.ErrorReportValve.invoke(ErrorReportValve.java:92) [tomcat-embed-core-9.0.27.jar:9.0.27]
+	at org.apache.catalina.core.StandardEngineValve.invoke(StandardEngineValve.java:74) [tomcat-embed-core-9.0.27.jar:9.0.27]
+	at org.apache.catalina.connector.CoyoteAdapter.service(CoyoteAdapter.java:343) [tomcat-embed-core-9.0.27.jar:9.0.27]
+	at org.apache.coyote.http11.Http11Processor.service(Http11Processor.java:408) [tomcat-embed-core-9.0.27.jar:9.0.27]
+	at org.apache.coyote.AbstractProcessorLight.process(AbstractProcessorLight.java:66) [tomcat-embed-core-9.0.27.jar:9.0.27]
+	at org.apache.coyote.AbstractProtocol$ConnectionHandler.process(AbstractProtocol.java:861) [tomcat-embed-core-9.0.27.jar:9.0.27]
+	at org.apache.tomcat.util.net.NioEndpoint$SocketProcessor.doRun(NioEndpoint.java:1579) [tomcat-embed-core-9.0.27.jar:9.0.27]
+	at org.apache.tomcat.util.net.SocketProcessorBase.run(SocketProcessorBase.java:49) [tomcat-embed-core-9.0.27.jar:9.0.27]
+	at java.util.concurrent.ThreadPoolExecutor.runWorker(ThreadPoolExecutor.java:1149) [na:1.8.0_211]
+	at java.util.concurrent.ThreadPoolExecutor$Worker.run(ThreadPoolExecutor.java:624) [na:1.8.0_211]
+	at org.apache.tomcat.util.threads.TaskThread$WrappingRunnable.run(TaskThread.java:61) [tomcat-embed-core-9.0.27.jar:9.0.27]
+	at java.lang.Thread.run(Thread.java:748) [na:1.8.0_211]
+
+2019-10-31 08:57:39.857  INFO 13612 --- [main] com.example.demo.DemoApplication         : Starting DemoApplication on wanghaopeng with PID 13612 (started by admin in C:\Users\姚丽霞\Desktop\学习代码\java学习\mysql-swagger-springboot\mysql-swagger-springboot-test)
+2019-10-31 08:57:39.862  INFO 13612 --- [main] com.example.demo.DemoApplication         : No active profile set, falling back to default profiles: default
+2019-10-31 08:57:40.746  INFO 13612 --- [main] trationDelegate$BeanPostProcessorChecker : Bean 'org.springframework.transaction.annotation.ProxyTransactionManagementConfiguration' of type [org.springframework.transaction.annotation.ProxyTransactionManagementConfiguration] is not eligible for getting processed by all BeanPostProcessors (for example: not eligible for auto-proxying)
+2019-10-31 08:57:40.958  INFO 13612 --- [main] o.s.b.w.embedded.tomcat.TomcatWebServer  : Tomcat initialized with port(s): 1010 (http)
+2019-10-31 08:57:40.967  INFO 13612 --- [main] o.apache.catalina.core.StandardService   : Starting service [Tomcat]
+2019-10-31 08:57:40.967  INFO 13612 --- [main] org.apache.catalina.core.StandardEngine  : Starting Servlet engine: [Apache Tomcat/9.0.27]
+2019-10-31 08:57:41.065  INFO 13612 --- [main] o.a.c.c.C.[Tomcat].[localhost].[/]       : Initializing Spring embedded WebApplicationContext
+2019-10-31 08:57:41.066  INFO 13612 --- [main] o.s.web.context.ContextLoader            : Root WebApplicationContext: initialization completed in 1144 ms
+2019-10-31 08:57:41.629  INFO 13612 --- [main] o.s.s.concurrent.ThreadPoolTaskExecutor  : Initializing ExecutorService 'applicationTaskExecutor'
+2019-10-31 08:57:41.749  INFO 13612 --- [main] d.s.w.p.DocumentationPluginsBootstrapper : Context refreshed
+2019-10-31 08:57:41.761  INFO 13612 --- [main] d.s.w.p.DocumentationPluginsBootstrapper : Found 1 custom documentation plugin(s)
+2019-10-31 08:57:41.768  INFO 13612 --- [main] s.d.s.w.s.ApiListingReferenceScanner     : Scanning for api listing references
+2019-10-31 08:57:41.803  WARN 13612 --- [main] d.s.r.o.OperationImplicitParameterReader : Coercing to be of type string. This may not even be a scalar type in actuality
+2019-10-31 08:57:41.870  WARN 13612 --- [main] d.s.r.o.OperationImplicitParameterReader : Coercing to be of type string. This may not even be a scalar type in actuality
+2019-10-31 08:57:41.908  INFO 13612 --- [main] o.s.b.w.embedded.tomcat.TomcatWebServer  : Tomcat started on port(s): 1010 (http) with context path ''
+2019-10-31 08:57:41.911  INFO 13612 --- [main] com.example.demo.DemoApplication         : Started DemoApplication in 2.438 seconds (JVM running for 3.529)
+2019-10-31 08:57:45.569  INFO 13612 --- [http-nio-1010-exec-1] o.a.c.c.C.[Tomcat].[localhost].[/]       : Initializing Spring DispatcherServlet 'dispatcherServlet'
+2019-10-31 08:57:45.569  INFO 13612 --- [http-nio-1010-exec-1] o.s.web.servlet.DispatcherServlet        : Initializing Servlet 'dispatcherServlet'
+2019-10-31 08:57:45.575  INFO 13612 --- [http-nio-1010-exec-1] o.s.web.servlet.DispatcherServlet        : Completed initialization in 6 ms
+2019-10-31 08:57:49.714  INFO 13612 --- [http-nio-1010-exec-9] com.zaxxer.hikari.HikariDataSource       : HikariPool-1 - Starting...
+2019-10-31 08:57:49.820  INFO 13612 --- [http-nio-1010-exec-9] com.zaxxer.hikari.HikariDataSource       : HikariPool-1 - Start completed.
+2019-10-31 08:57:49.825 DEBUG 13612 --- [http-nio-1010-exec-9] dao.UserDao.selectUser                   : ==>  Preparing: select * from user where id = ? 
+2019-10-31 08:57:49.846 DEBUG 13612 --- [http-nio-1010-exec-9] dao.UserDao.selectUser                   : ==> Parameters: 1(Integer)
+2019-10-31 08:57:49.880 DEBUG 13612 --- [http-nio-1010-exec-9] dao.UserDao.selectUser                   : <==      Total: 1
