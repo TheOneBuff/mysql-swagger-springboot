@@ -19,7 +19,6 @@ public class MyController {
     @RequestMapping(value = "/helloword",method = RequestMethod.GET)
     @ApiOperation(value = "helloword学习",notes = "练习swagger")
     @ResponseBody
-    @ApiImplicitParam(name="aaa")
     public String helloword()
     {
         return "helloword";
@@ -28,7 +27,6 @@ public class MyController {
     @RequestMapping(value = "/userall",method = RequestMethod.GET)
     @ApiOperation(value = "获取user表所有数据",notes = "获取user表所有数据")
     @ResponseBody
-    @ApiImplicitParam(name="aaa")
     public List<User> userall()
     {
         return userService.userlist();
