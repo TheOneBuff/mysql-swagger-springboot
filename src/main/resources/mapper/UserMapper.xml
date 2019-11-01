@@ -4,4 +4,10 @@
     <select id="selectUser" parameterType="int" resultType="bean.User">
        select * from user where id = #{id}
    </select>
+    <insert id="insertUser" parameterType="bean.User">
+       insert into user(id,name,age) values(#{id},#{name},#{age})
+    </insert>
+    <update id="updateUser" parameterType="bean.User" >
+        update user set name=#{name} where id=#{id}
+    </update>
 </mapper>

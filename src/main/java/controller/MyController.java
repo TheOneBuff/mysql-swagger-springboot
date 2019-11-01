@@ -40,4 +40,21 @@ public class MyController {
     {
         return userService.selectUser(id);
     }
+
+    //增加User信息到数据库
+    @RequestMapping(value="/insertUser",method =RequestMethod.POST)
+    @ApiOperation(value="增加User信息到数据库",notes = "增加User信息到数据库")
+    @ResponseBody
+    public int insertUser(@RequestBody User user)
+    {
+        return userService.insertUser(user);
+    }
+
+    @RequestMapping(value="/updateUser",method =RequestMethod.POST)
+    @ApiOperation(value="修改User信息到数据库",notes = "修改User信息到数据库")
+    @ResponseBody
+    public int updateUser(@RequestBody User user)
+    {
+        return userService.updateUser(user);
+    }
 }
