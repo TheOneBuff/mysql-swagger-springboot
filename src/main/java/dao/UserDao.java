@@ -10,7 +10,7 @@ public interface UserDao {
     @Select("select * from user")
     List<User> userlist();
     //根据ID获得对应的user信息
-    User selectUser(int id);
+    List<User> selectUser(int id);
     //增加单个User信息到数据库
     int insertUser(User user);
     //修改单个User信息

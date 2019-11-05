@@ -20,7 +20,7 @@ public class UserImpl implements UserService {
     }
 
     @Override
-    public User selectUser(int id) {
+    public List<User> selectUser(int id) {
         return userDao.selectUser(id);
     }
 

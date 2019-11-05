@@ -1,17 +1,18 @@
 package controller;
 
 import bean.User;
-import io.swagger.annotations.ApiImplicitParam;
 import io.swagger.annotations.ApiOperation;
+import org.slf4j.Logger;
+import org.slf4j.LoggerFactory;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.web.bind.annotation.*;
 import service.UserService;
-
 import java.util.List;
 
 @RestController
 @RequestMapping("/my")
 public class MyController {
+    private static final Logger logger = LoggerFactory.getLogger(MyController.class);
 
     @Autowired
     UserService userService;
@@ -21,6 +22,10 @@ public class MyController {
     @ResponseBody
     public String helloword()
     {
+        //获得当前的类名
+        //logger.debug(Thread.currentThread().getStackTrace()[1].getClassName());
+        //获得当前方法名
+        logger.debug(Thread.currentThread().getStackTrace()[1].getMethodName() + "开始执行");
         return "helloword";
     }
 
@@ -36,7 +41,7 @@ public class MyController {
     @RequestMapping(value = "/selectUser",method = RequestMethod.GET)
     @ApiOperation(value="根据id获得相应数据",notes = "根据id获得相应数据")
     @ResponseBody
-    public User selectUser(@RequestParam(value = "id") int id)
+    public List<User> selectUser(@RequestParam(value = "id") int id)
     {
         return userService.selectUser(id);
     }
