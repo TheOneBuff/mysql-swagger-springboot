@@ -12,6 +12,7 @@ import java.util.List;
 @RestController
 @RequestMapping("/my")
 public class MyController {
+
     private static final Logger logger = LoggerFactory.getLogger(MyController.class);
 
     @Autowired
