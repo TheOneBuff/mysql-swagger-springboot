@@ -9,7 +9,9 @@ import org.apache.poi.xssf.usermodel.XSSFCell;
 import org.apache.poi.xssf.usermodel.XSSFRow;
 import org.apache.poi.xssf.usermodel.XSSFSheet;
 import org.apache.poi.xssf.usermodel.XSSFWorkbook;
+import org.springframework.stereotype.Component;
 
+import java.awt.*;
 import java.io.File;
 import java.io.FileInputStream;
 import java.io.FileOutputStream;
@@ -18,31 +20,52 @@ import java.text.DecimalFormat;
 import java.util.ArrayList;
 import java.util.List;
 
+/**
+*@Author by wanghaopeng on 2019/11/8 16:08
+*@Comment EXECL工具类
+**/
+@Component
 public class ExeclTool {
     private XSSFSheet ExcelWSheet;
     private XSSFWorkbook ExcelWBook;
     private XSSFCell Cell;
     private XSSFRow row;
     private String filePath;
+    private FileInputStream ExcelFile;
 
-    //设定要操作的Excel 的文件路径和Excel 文件中的sheet名称
-    //在读写excel的时候，均需要先调用此方法，设定要操作的excel 文件路径和要操作的sheet名称
-    //构造函数初始化
-    public ExeclTool(String Path, String SheetName) throws IOException {
-        FileInputStream ExcelFile;
+//    设定要操作的Excel 的文件路径和Excel 文件中的sheet名称
+//    在读写excel的时候，均需要先调用此方法，设定要操作的excel 文件路径和要操作的sheet名称
+//    构造函数初始化
+//    public ExeclTool(String Path, String SheetName) throws IOException {
+//        System.out.print("构造函数初始化");
+//        FileInputStream ExcelFile;
+//        try{
+//            //实例化excel 文件的FileInputStream 对象
+//            ExcelFile = new FileInputStream(Path);
+//            //实例化excel 文件的XSSFWorkbook 对象
+//            ExcelWBook = new XSSFWorkbook(ExcelFile);
+//            //实例化ExcelWSheet 对象，指定excel 文件中的sheet 名称，后续用于sheet 中行、列和单元格的操作
+//            ExcelWSheet = ExcelWBook.getSheet(SheetName);
+//        }catch (Exception e){
+//            throw (e);
+//        }
+//        filePath = Path;
+//    }
+
+    //execl初始化
+    public void execlInit(String path,String sheetName) throws IOException {
         try{
             //实例化excel 文件的FileInputStream 对象
-            ExcelFile = new FileInputStream(Path);
+            ExcelFile = new FileInputStream("C:\\Users\\姚丽霞\\Desktop\\学习代码\\java学习\\mysql-swagger-springboot\\test.xlsx");
             //实例化excel 文件的XSSFWorkbook 对象
             ExcelWBook = new XSSFWorkbook(ExcelFile);
             //实例化ExcelWSheet 对象，指定excel 文件中的sheet 名称，后续用于sheet 中行、列和单元格的操作
-            ExcelWSheet = ExcelWBook.getSheet(SheetName);
+            ExcelWSheet = ExcelWBook.getSheet(sheetName);
         }catch (Exception e){
             throw (e);
         }
-        filePath = Path;
     }
-
+    
     //读取指定单元格的数据。需要传入行数、列数
     public String getCellData(int RowNum,int ColNum) throws Exception{
         try{
