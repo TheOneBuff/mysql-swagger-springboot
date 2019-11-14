@@ -12,3 +12,20 @@ js产生精度误差
 小数→二进制→十进制。就产生了误差。
 
 参考：https://github.com/camsong/blog/issues/9
+
+===================================
+JAVA中泛型是不变的，可有时需要实现逆变与协变，怎么办呢？这时就需要通配符?。
+
+<? extends E>实现了泛型的协变，比如：​​​​​​​
+
+List<? extends Food> foodList = new ArrayList<>();
+List<Apple> appleList = new ArrayList<>();
+foodList = appleList; // ok 协变
+
+foodList.add(new Beef()); // 错误 不能执行添加null 以外的操作
+foodList.add(new Food());// 错误，同上，
+foodlist.add(new Apple()); // 错误，同上
+
+Food food = foodList.get(index); //ok, 把子类引用赋值给父类显然是可以的
+
+<？ extends Food>指明了上界，即表示了集合中存放的对象是 Food 或者Food 的子类，因此foodList 就表示了一个存放 Food 或者Food 的子类的集合，appleList 集合就是一个存放 Food 的子类 Apple 的集合， 因此可以把 appleList 赋值给 foodList ,但是不能对foodList 添加除null 以外的任何对象。为什么不能添加呢？其实很简单，如果可以允许的话，那么foodList 就可以添加Food 或者Food 的子类型，那么上面代码中在foodList = appleList; 赋值后，执行foodList.add(new Beef()); 操作就会导致给 appleList 里面添加了一个Beef 对象，显然这样是不对的。
