@@ -6,6 +6,7 @@ import globalvariables.GlobalVariables;
 import org.apache.poi.hssf.usermodel.*;
 import org.apache.poi.ss.formula.functions.T;
 import org.apache.poi.ss.usermodel.*;
+import org.apache.poi.ss.util.CellRangeAddress;
 import org.apache.poi.xssf.usermodel.XSSFWorkbook;
 import org.springframework.stereotype.Component;
 import java.io.FileOutputStream;
@@ -57,6 +58,11 @@ public class ExeclOutput<T> {
                 cell.setCellValue(obj.toString());
             }
         }
+        //row = sheet1.createRow(rowindex + 1);
+        //合并单元格
+        //参数说明：1：开始行 2：结束行  3：开始列 4：结束列
+        //sheet1.addMergedRegion(new CellRangeAddress(0,rowindex,1,1));
+
         wb.write(ex);
     }
 

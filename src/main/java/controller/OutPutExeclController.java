@@ -21,8 +21,8 @@ public class OutPutExeclController {
 
     @Autowired
     ExeclService execlService;
-    @ApiOperation(value = "输出EXECL",notes = "输出EXECL")
-    @RequestMapping(value = "/output",method = RequestMethod.POST)
+    @ApiOperation(value = "输出user表数据到EXECL",notes = "输出user表数据到EXECL")
+    @RequestMapping(value = "/useroutput",method = RequestMethod.POST)
     public void OutputExecl(@RequestParam (value = "path")String path,@RequestParam(value = "sheetname")String sheetname) throws InvocationTargetException, NoSuchMethodException, InstantiationException, IllegalAccessException, IOException {
         execlService.OutputExecl(path,sheetname);
     }
