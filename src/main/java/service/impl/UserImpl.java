@@ -32,4 +32,14 @@ public class UserImpl implements UserService {
     public int updateUser(User user) {
         return userDao.updateUser(user);
     }
+
+    @Override
+    public int insertUserList(List<User> userlist) {
+        int count = 0;
+        for (User user : userlist)
+        {
+            count = userDao.insertUser(user) + count;
+        }
+        return count;
+    }
 }

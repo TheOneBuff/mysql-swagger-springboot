@@ -13,4 +13,6 @@ public interface UserService {
     int insertUser(User user);
     //修改单个user
     int updateUser(User user);
+    //增加多个User信息到数据库
+    int insertUserList(List<User> userlist);
 }

@@ -32,6 +32,9 @@ public class ExeclImpl implements ExeclService {
     @Autowired
     ExeclInput execlInput;
 
+    @Autowired
+    UserImpl execlService;
+
     @Override
     public void OutputExecl(String path, String sheetName) throws IOException, NoSuchMethodException, IllegalAccessException, InvocationTargetException {
         List<User> userList = userDao.userlist();
@@ -42,6 +45,7 @@ public class ExeclImpl implements ExeclService {
 
     @Override
     public void IntputExecl() throws IOException {
-        execlInput.execlInit();
+        List<User> userlist = execlInput.execlInit();
+        int count = execlService.insertUserList(userlist);
     }
 }
