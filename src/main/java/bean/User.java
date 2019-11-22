@@ -4,6 +4,10 @@ import org.springframework.stereotype.Component;
 
 import java.io.Serializable;
 
+/**
+*@Author by wanghaopeng on 2019/11/22 8:37
+*@Comment user表对应的bean
+**/
 @Component
 public class User implements Serializable {
     private Integer id;
