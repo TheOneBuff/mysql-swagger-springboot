@@ -12,8 +12,17 @@ public class Customer {
     public String password;
     public String ip;
     public String mac;
-
+    //这2个字段没什么用，数据更新的时候自动更新update_time，create_time插入的时候更新
     public String update_time;
+    public String getCreate_time() {
+        return create_time;
+    }
+
+    public void setCreate_time(String create_time) {
+        this.create_time = create_time;
+    }
+
+    public String create_time;
 
     public String getName() {
         return name;

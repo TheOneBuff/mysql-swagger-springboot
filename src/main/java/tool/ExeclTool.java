@@ -10,8 +10,6 @@ import org.apache.poi.xssf.usermodel.XSSFRow;
 import org.apache.poi.xssf.usermodel.XSSFSheet;
 import org.apache.poi.xssf.usermodel.XSSFWorkbook;
 import org.springframework.stereotype.Component;
-
-import java.awt.*;
 import java.io.File;
 import java.io.FileInputStream;
 import java.io.FileOutputStream;
@@ -92,10 +90,10 @@ public class ExeclTool {
                 return CellData;
             }
             else {
-                return"";
+                return "";
             }
         }catch (Exception e){
-            return"";
+            return "";
         }
     }
     //读取指定单元格的数据且值为数字。需要传入行数、列数
