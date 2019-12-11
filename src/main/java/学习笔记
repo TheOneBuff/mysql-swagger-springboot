@@ -78,3 +78,28 @@ https://blog.csdn.net/CrankZ/article/details/82874158
    1、较少了网络开销
    2、系统的性能会有一个实质的提升
    3、没了麻烦的TIME_WAIT状态
+==========================================
+三元运算
+
+a>b ? a: b    a大于b 则显示a ,反着 显示b
+
+======================================
+
+mysql 对行加锁必须要在事务里用
+START TRANSACTION;  #加事务
+SELECT * FROM customer    WHERE name = '123' FOR UPDATE;  #加锁
+select SLEEP(5);  # 睡眠 等待5秒后执行下边的update语句
+COMMIT; #提交
+
+update customer set ip='aaaaaaaaaaaaaaaa' WHERE name = '123';
+COMMIT;    #提交更新这个update语句
+
+===========================
+for update锁行
+#在本机执行下边2行语句，然后在另外一台电脑在运行一个更新语句，会阻塞。在本机执行  最后2句语句后，另外一台电脑就不阻塞了。
+Set autocommit = 0;  #取消自动提交，    =1的时候是自动提交
+select * from customer where name='whptest' for update;
+
+
+update customer set ip='9999' where name='whptest';
+COMMIT;

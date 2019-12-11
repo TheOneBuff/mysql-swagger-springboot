@@ -1,8 +1,12 @@
 package service.impl;
 
 import bean.Customer;
+import controller.CustomerController;
 import dao.CustomerDao;
+import org.slf4j.Logger;
+import org.slf4j.LoggerFactory;
 import org.springframework.beans.factory.annotation.Autowired;
+import org.springframework.stereotype.Component;
 import org.springframework.stereotype.Service;
 import org.springframework.transaction.annotation.Transactional;
 import org.springframework.transaction.interceptor.TransactionAspectSupport;
@@ -17,6 +21,8 @@ import java.util.List;
 @Service
 public class CustomerImpl implements CustomerService {
 
+    private static final Logger logger = LoggerFactory.getLogger(CustomerImpl.class);
+
     @Autowired
     CustomerDao customerDao;
 
@@ -26,20 +32,8 @@ public class CustomerImpl implements CustomerService {
      * @return int
      **/
     @Override
-    @Transactional(rollbackFor = Exception.class)
     public int insertCustomer(Customer customer) {
-        int count = 0;
-        try{
-            count = customerDao.insertCustomer(customer);
-        }
-        catch (Exception e)
-        {
-            e.printStackTrace();
-            //手动回滚
-            TransactionAspectSupport.currentTransactionStatus().setRollbackOnly();
-            return -1;
-        }
-        return count;
+        return customerDao.insertCustomer(customer);
     }
 
     @Override
@@ -50,5 +44,16 @@ public class CustomerImpl implements CustomerService {
     @Override
     public int updateCustomer(Customer customer) {
         return customerDao.updateCustomer(customer);
+    }
+
+    @Override
+    public Customer selectCustomer(String name, String password) {
+        logger.debug(Thread.currentThread().getStackTrace()[1].getMethodName() + "开始执行");
+        return customerDao.selectCustomer(name, password);
+    }
+
+    @Override
+    public Customer selectOneCustomer(String name) {
+        return customerDao.selectOneCustomer(name);
     }
 }

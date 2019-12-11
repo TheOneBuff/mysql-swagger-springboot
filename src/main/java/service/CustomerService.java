@@ -13,4 +13,8 @@ public interface CustomerService {
     List<Customer> selectAll();
     //更新数据库信息
     int updateCustomer(Customer customer);
+    //对数据行上锁
+    Customer selectCustomer(String name, String password);
+    //查询单个客户信息
+    Customer selectOneCustomer(String name);
 }

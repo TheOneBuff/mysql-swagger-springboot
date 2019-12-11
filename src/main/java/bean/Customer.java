@@ -9,19 +9,12 @@ import org.springframework.stereotype.Component;
 @Component
 public class Customer {
     public String name;
-    public String password;
+    public String password_old;
+    public String password_new;
     public String ip;
     public String mac;
     //这2个字段没什么用，数据更新的时候自动更新update_time，create_time插入的时候更新
     public String update_time;
-    public String getCreate_time() {
-        return create_time;
-    }
-
-    public void setCreate_time(String create_time) {
-        this.create_time = create_time;
-    }
-
     public String create_time;
 
     public String getName() {
@@ -32,12 +25,20 @@ public class Customer {
         this.name = name;
     }
 
-    public String getPassword() {
-        return password;
+    public String getPassword_old() {
+        return password_old;
     }
 
-    public void setPassword(String password) {
-        this.password = password;
+    public void setPassword_old(String password_old) {
+        this.password_old = password_old;
+    }
+
+    public String getPassword_new() {
+        return password_new;
+    }
+
+    public void setPassword_new(String password_new) {
+        this.password_new = password_new;
     }
 
     public String getIp() {
@@ -64,4 +65,11 @@ public class Customer {
         this.update_time = update_time;
     }
 
+    public String getCreate_time() {
+        return create_time;
+    }
+
+    public void setCreate_time(String create_time) {
+        this.create_time = create_time;
+    }
 }

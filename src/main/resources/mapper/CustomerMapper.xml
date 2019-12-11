@@ -2,9 +2,34 @@
 <!DOCTYPE mapper PUBLIC "-//mybatis.org//DTD Mapper 3.0//EN" "http://mybatis.org/dtd/mybatis-3-mapper.dtd" >
 <mapper namespace="dao.CustomerDao">
     <insert id="insertCustomer" parameterType="bean.Customer">
-       insert into customer(name,password,ip,mac) values(#{name},#{password},#{ip},#{mac})
+       insert into customer(name,password,ip,mac) values(#{name},#{password_new},#{ip},#{mac})
     </insert>
     <update id="updateCustomer" parameterType="bean.Customer" >
-        update customer set password = #{password} where name=#{name}
+        <!--update customer set password = #{password} where name = #{name}-->
+        update customer set
+        <if test="password_new != '' and password_new != null" >
+            password = #{password_new}
+        </if>
+        <if test="password_new != '' and password_new != null and ip != '' and ip != null" >
+            , ip = #{ip}
+        </if>
+        <if test="''.equals(password_new) and ip != '' and ip != null" >
+             ip = #{ip}
+        </if>
+        <if test="ip !='' and ip != null and mac != '' and mac != null" >
+            , mac = #{mac}
+        </if>
+        <if test="''.equals(ip) and mac != '' and mac != null" >
+            mac = #{mac}
+        </if>
+        where name = #{name}
     </update>
+    <select id="selectCustomer" resultType="bean.Customer">
+         select name,password from customer
+         where name = #{name}
+        <if test="password != '' and password != null" >
+            and password = #{password}
+        </if>
+        for update
+    </select>
 </mapper>

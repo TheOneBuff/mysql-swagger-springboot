@@ -1,12 +1,8 @@
 package tool;
 
 import bean.Customer;
-import io.swagger.annotations.ApiOperation;
 import org.springframework.stereotype.Component;
-import org.springframework.web.bind.annotation.RequestMapping;
-import org.springframework.web.bind.annotation.RequestMethod;
-import org.springframework.web.bind.annotation.ResponseBody;
-
+import javax.servlet.http.HttpServletRequest;
 import java.net.Inet4Address;
 import java.net.InetAddress;
 import java.net.NetworkInterface;
@@ -74,6 +70,14 @@ public class GetIpAndMac {
         }
         return customer;
     }
+
+
+    public static String getipmac1(HttpServletRequest httpRequest)
+    {
+        httpRequest.getHeaderNames();
+
+        return "";
+    }
 //    /**
 //     * 用命令行来，获取widnows网卡的mac地址.
 //     *
@@ -124,5 +128,31 @@ public class GetIpAndMac {
 //            process = null;
 //        }
 //        return ipmac;
+//    }
+//    /**
+//     * @Comment 根据ip获取局域网mac
+//     * @param [cmd, another]
+//     * @return java.lang.String
+//     **/
+//    public static String callCmd(String[] cmd, String[] another) {
+//
+//        String[] cmd = { "cmd", "/c", "ping " + ip };
+//        String[] another = { "cmd", "/c", "arp -a" };
+//        String result = "";
+//        String line = "";
+//        try {
+//            Runtime rt = Runtime.getRuntime();
+//            Process proc = rt.exec(cmd);
+//            proc.waitFor(); // 已经执行完第一个命令，准备执行第二个命令
+//            proc = rt.exec(another);
+//            InputStreamReader is = new InputStreamReader(proc.getInputStream(),"GBK");
+//            BufferedReader br = new BufferedReader(is);
+//            while ((line = br.readLine()) != null) {
+//                result += line;
+//            }
+//        } catch (Exception e) {
+//            e.printStackTrace();
+//        }
+//        return result;
 //    }
 }
