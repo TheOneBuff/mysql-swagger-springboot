@@ -1,6 +1,7 @@
 package controller;
 
 import io.swagger.annotations.ApiOperation;
+import learning.Extend.TestClassA;
 import learning.InnerAndOutClass.OutClassAndInnerClass;
 import learning.InnerAndOutClass.TestOutClass;
 import org.springframework.stereotype.Controller;
@@ -58,5 +59,16 @@ public class Learn {
         c = c + 1;
         System.out.println("c=c+1：" + c);
         return 1;
+    }
+
+    @ApiOperation(value = "学习用-接口集成接口")
+    @RequestMapping(value = "/learn_Innerface", method = RequestMethod.GET)
+    public String learn_Innerface()
+    {
+        TestClassA testClassA = new TestClassA();
+        testClassA.InterfaceATest();
+        testClassA.InterfaceBTest();
+        testClassA.InterfaceCTest();
+        return "正常";
     }
 }
