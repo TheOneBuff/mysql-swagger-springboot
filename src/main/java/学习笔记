@@ -103,3 +103,6 @@ select * from customer where name='whptest' for update;
 
 update customer set ip='9999' where name='whptest';
 COMMIT;
+
+===============================================================
+接口可以继承接口，接口可以多继承。接口里的属性最好是static finall 的，接口的性质决定。最少是static的，这样可以访问这个属性，如果定义成public int i =0；其他类根本访问不到这个属性，

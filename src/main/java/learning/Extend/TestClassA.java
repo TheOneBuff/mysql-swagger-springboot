@@ -1,5 +1,9 @@
 package learning.Extend;
 
+/**
+*@Author by wanghaopeng on 2019/12/13 8:49
+*@Comment 学习接口相关的东西
+**/
 public class TestClassA implements InterfaceC {
     @Override
     public void InterfaceCTest() {
